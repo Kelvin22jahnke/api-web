@@ -19,5 +19,5 @@ ASP.NET Core 7: Framework para desenvolvimento de aplicações web modernas.
 Entity Framework Core: ORM (Object-Relational Mapper) para trabalhar com bancos de dados de forma orientada a objetos.
 MySQL: Sistema de gerenciamento de banco de dados relacional.
 # Requisitos:
-.NET 7 SDK
-MySQL Server
+- .NET 7 SDK
+- MySQL Server
