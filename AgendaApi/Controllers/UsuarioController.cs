@@ -1,4 +1,5 @@
-﻿using AgendaAPI.Model;
+﻿using AgendaAPI.Infraestrutura.Interface;
+using AgendaAPI.Model;
 using AgendaAPI.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 

@@ -1,4 +1,6 @@
-﻿namespace AgendaAPI.Model
+﻿using AgendaAPI.Model;
+
+namespace AgendaAPI.Infraestrutura.Interface
 {
     public interface IUsuarioRepository
     {

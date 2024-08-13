@@ -1,6 +1,6 @@
 using AgendaAPI.infraestrutura;
 using AgendaAPI.Infraestrutura;
-using AgendaAPI.Model;
+using AgendaAPI.Infraestrutura.Interface;
 
 var builder = WebApplication.CreateBuilder(args);
 
