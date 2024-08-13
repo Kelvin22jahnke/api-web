@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using AgendaAPI.ViewModel;
 
 namespace AgendaAPI.Model
 {
@@ -11,10 +12,10 @@ namespace AgendaAPI.Model
         public string Login { get; private set; }
         public string Senha { get; private set; }
 
-        public Usuario(string login, string senha)
+        public Usuario(UsuarioViewModel usuarioViewModel )
         {
-            this.Login = login ?? throw new ArgumentNullException(nameof(login));
-            this.Senha = senha ?? throw new ArgumentNullException(nameof(login));
+            this.Login = usuarioViewModel.Login;
+            this.Senha = usuarioViewModel.Senha;
         }
     }
 }

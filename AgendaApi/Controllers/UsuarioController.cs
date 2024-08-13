@@ -20,7 +20,7 @@ namespace AgendaAPI.Controllers
         [HttpPost]
         public IActionResult Add(UsuarioViewModel usuarioViewModel)
         {
-            var usuario = new Usuario(usuarioViewModel.Login, usuarioViewModel.Senha);
+            var usuario = new Usuario(usuarioViewModel);
             _usuarioRepository.Add(usuario);
 
             return Ok();

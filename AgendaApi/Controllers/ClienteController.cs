@@ -19,7 +19,7 @@ namespace AgendaAPI.Controllers
         [HttpPost]
         public IActionResult Add(ClienteViewModel clienteViewModel)
         {
-            var cliente = new Cliente(clienteViewModel.Nome);
+            var cliente = new Cliente(clienteViewModel);
             _clienteRepository.Add(cliente);
 
             return Ok();

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using AgendaAPI.ViewModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AgendaAPI.Model
@@ -9,10 +10,14 @@ namespace AgendaAPI.Model
         [Key]
         public int Id { get; private set; }
         public string Nome { get; private set; }
+        public string Endereco { get; private set; }
+        public string Telefone { get; private set; }
 
-        public Cliente(string nome) 
+        public Cliente(ClienteViewModel clienteViewModel) 
         {
-            this.Nome = nome ?? throw new ArgumentNullException(nameof(nome));
+            this.Nome = clienteViewModel.Nome;
+            this.Endereco = clienteViewModel.Endereco;
+            this.Telefone = clienteViewModel.Telefone;
         }    
     }
 }
