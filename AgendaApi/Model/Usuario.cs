@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using AgendaAPI.ViewModel;
+using AgendaAPI.DTO;
 
 namespace AgendaAPI.Model
 {
@@ -12,10 +12,10 @@ namespace AgendaAPI.Model
         public string Login { get; private set; }
         public string Senha { get; private set; }
 
-        public Usuario(UsuarioViewModel usuarioViewModel )
+        public Usuario(UsuarioDTO usuarioDTO )
         {
-            this.Login = usuarioViewModel.Login;
-            this.Senha = usuarioViewModel.Senha;
+            this.Login = usuarioDTO.Login;
+            this.Senha = usuarioDTO.Senha;
         }
     }
 }

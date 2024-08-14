@@ -1,9 +1,9 @@
 ﻿using AgendaAPI.Model;
 using Microsoft.EntityFrameworkCore;
 
-namespace AgendaAPI.infraestrutura
+namespace AgendaAPI.Infraestrutura.DB
 {
-    public class ConexaoContext:DbContext
+    public class ConexaoContext : DbContext
     {
         public DbSet<Cliente>? Clientes { get; set; }
         public DbSet<Usuario>? Usuarios { get; set; }

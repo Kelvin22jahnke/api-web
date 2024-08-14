@@ -1,4 +1,4 @@
-﻿using AgendaAPI.ViewModel;
+﻿using AgendaAPI.DTO;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -13,11 +13,11 @@ namespace AgendaAPI.Model
         public string Endereco { get; private set; }
         public string Telefone { get; private set; }
 
-        public Cliente(ClienteViewModel clienteViewModel) 
+        public Cliente(ClienteDTO clienteDTO) 
         {
-            this.Nome = clienteViewModel.Nome;
-            this.Endereco = clienteViewModel.Endereco;
-            this.Telefone = clienteViewModel.Telefone;
+            this.Nome = clienteDTO.Nome;
+            this.Endereco = clienteDTO.Endereco;
+            this.Telefone = clienteDTO.Telefone;
         }    
     }
 }

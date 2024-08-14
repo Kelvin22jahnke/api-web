@@ -1,4 +1,5 @@
-﻿using AgendaAPI.Infraestrutura.Interface;
+﻿using AgendaAPI.Infraestrutura.DB;
+using AgendaAPI.Infraestrutura.Interface;
 using AgendaAPI.Model;
 
 namespace AgendaAPI.infraestrutura

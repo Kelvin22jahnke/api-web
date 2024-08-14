@@ -1,4 +1,4 @@
-﻿using AgendaAPI.infraestrutura;
+﻿using AgendaAPI.Infraestrutura.DB;
 using AgendaAPI.Infraestrutura.Interface;
 using AgendaAPI.Model;
 

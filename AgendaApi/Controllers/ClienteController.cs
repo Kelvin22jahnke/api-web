@@ -1,4 +1,5 @@
-﻿using AgendaAPI.Infraestrutura.Interface;
+﻿using AgendaAPI.DTO;
+using AgendaAPI.Infraestrutura.Interface;
 using AgendaAPI.Model;
 using AgendaAPI.ViewModel;
 using Microsoft.AspNetCore.Mvc;
@@ -17,9 +18,9 @@ namespace AgendaAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Add(ClienteViewModel clienteViewModel)
+        public IActionResult Add(ClienteDTO clienteDTO)
         {
-            var cliente = new Cliente(clienteViewModel);
+            Cliente cliente = new Cliente(clienteDTO);
             _clienteRepository.Add(cliente);
 
             return Ok();
@@ -28,7 +29,7 @@ namespace AgendaAPI.Controllers
         [HttpGet]
         public IActionResult Get() 
         {
-            var clientes = _clienteRepository.GetAll();
+            List<Cliente> clientes = _clienteRepository.GetAll();
             return Ok(clientes);
         }
     }
