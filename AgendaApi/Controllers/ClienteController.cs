@@ -1,7 +1,6 @@
 ﻿using AgendaAPI.DTO;
 using AgendaAPI.Infraestrutura.Interface;
 using AgendaAPI.Model;
-using AgendaAPI.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AgendaAPI.Controllers
@@ -20,7 +19,10 @@ namespace AgendaAPI.Controllers
         [HttpPost]
         public IActionResult Add(ClienteDTO clienteDTO)
         {
-            Cliente cliente = new Cliente(clienteDTO);
+            Cliente cliente = new Cliente(clienteDTO.Nome, 
+                                          clienteDTO.Endereco, 
+                                          clienteDTO.Telefone);
+
             _clienteRepository.Add(cliente);
 
             return Ok();

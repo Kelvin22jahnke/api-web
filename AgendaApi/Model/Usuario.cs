@@ -12,10 +12,10 @@ namespace AgendaAPI.Model
         public string Login { get; private set; }
         public string Senha { get; private set; }
 
-        public Usuario(UsuarioDTO usuarioDTO )
+        public Usuario(string login, string senha)
         {
-            this.Login = usuarioDTO.Login;
-            this.Senha = usuarioDTO.Senha;
+            this.Login = login;
+            this.Senha = senha;
         }
     }
 }

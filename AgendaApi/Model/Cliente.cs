@@ -13,11 +13,12 @@ namespace AgendaAPI.Model
         public string Endereco { get; private set; }
         public string Telefone { get; private set; }
 
-        public Cliente(ClienteDTO clienteDTO) 
+        public Cliente(string nome, 
+                       string endereco, string telefone) 
         {
-            this.Nome = clienteDTO.Nome;
-            this.Endereco = clienteDTO.Endereco;
-            this.Telefone = clienteDTO.Telefone;
+            this.Nome = nome;
+            this.Endereco = endereco;
+            this.Telefone = telefone;
         }    
     }
 }

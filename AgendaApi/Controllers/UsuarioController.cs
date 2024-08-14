@@ -1,7 +1,6 @@
 ﻿using AgendaAPI.DTO;
 using AgendaAPI.Infraestrutura.Interface;
 using AgendaAPI.Model;
-using AgendaAPI.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AgendaAPI.Controllers
@@ -21,7 +20,8 @@ namespace AgendaAPI.Controllers
         [HttpPost]
         public IActionResult Add(UsuarioDTO usuarioDTO)
         {
-            Usuario usuario = new Usuario(usuarioDTO);
+            Usuario usuario = new Usuario(usuarioDTO.Login, 
+                                          usuarioDTO.Login);
             _usuarioRepository.Add(usuario);
 
             return Ok();
