@@ -2,8 +2,12 @@
 Este projeto é uma API Web desenvolvida utilizando ASP.NET Core 7, com Entity Framework Core para acesso ao banco de dados MySQL. A estrutura do projeto segue o padrão Model-ViewModel-Controller (MVC), incluindo uma camada de infraestrutura para facilitar a escalabilidade e manutenção.
 
 # Estrutura do Projeto:
-# ViewModel:
-Os ViewModels são utilizados para representar os dados que serão expostos pelas ações dos controllers. Eles são projetados para fornecer apenas os dados necessários para a interface do usuário ou para o consumo por parte dos clientes da API, sem expor diretamente os modelos de domínio.
+
+
+Aqui está o texto modificado para utilizar DTOs:
+
+# DTO (Data Transfer Object):
+Os DTOs são utilizados para representar os dados que serão transferidos entre diferentes camadas de uma aplicação, como entre o controlador e a camada de serviço ou entre o backend e o frontend. Eles são projetados para fornecer apenas os dados necessários para a operação em questão, sem expor diretamente os modelos de domínio ou a estrutura interna da aplicação.
 
 # Model:
 Os Models representam as entidades do domínio e são mapeados diretamente para as tabelas do banco de dados. Eles contêm a lógica de negócio e as propriedades que serão persistidas no banco de dados.
